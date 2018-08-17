@@ -7,12 +7,14 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Crud' => $baseDir . '/app/Crud.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\CrudController' => $baseDir . '/app/Http/Controllers/CrudController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -39,6 +41,7 @@ return array(
     'Cron\\HoursField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
     'Cron\\MinutesField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
+    'CrudTableSeeder' => $baseDir . '/database/seeds/CrudTableSeeder.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
