@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Crud;
 use Illuminate\Http\Request;
+use Response;
 
 class CrudController extends Controller
 {
@@ -14,7 +15,7 @@ class CrudController extends Controller
      */
     public function index()
     {
-        //
+        return Crud::all();
     }
 
     /**
@@ -67,9 +68,13 @@ class CrudController extends Controller
      * @param  \App\Crud  $crud
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Crud $crud)
+    public function update(Request $request, $id)
     {
-        //
+        $crud = Crud::findOrFail($id);
+        $crud->color = $request->color;
+        $crud->update($request->all());
+        
+        return $crud;
     }
 
     /**
@@ -80,6 +85,8 @@ class CrudController extends Controller
      */
     public function destroy(Crud $crud)
     {
-        //
+        $id = $crud->id;
+        $crud->delete();
+        return 'Data ' . $id . ' has successfully deleted';
     }
 }
